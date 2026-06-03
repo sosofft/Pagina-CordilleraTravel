@@ -1,22 +1,27 @@
-:root{
-    --color-fondo:#e2e4e2;
-    --color-secciones:#77806352;
-    --header-color:  #1a402ac4;
-    --marca-color:  #133623;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-fondo: #e2e4e2;
+    --color-secciones: #77806352;
+    --header-color: #1a402ac4;
+    --marca-color: #133623;
     --fuente-principal: "Ultra", serif;
     --fuente-parrafo: "Encode Sans Condensed", sans-serif;
-    --color-lineas:  #efb2195b;
     --seccion-bordes: 10px;
 }
 
 
 body {
-   background-color: var(--color-fondo);
-  
+    background-color: var(--color-fondo);
+
 }
+
 .header-principal {
-background-color: var(--header-color);
-padding: 4px;
+    background-color: var(--header-color);
+    padding: 4px;
 }
 
 a {
@@ -26,7 +31,7 @@ a {
 }
 
 ul {
-   list-style: none;
+    list-style: none;
     display: flex;
     justify-content: left;
     gap: 20px;
@@ -35,14 +40,16 @@ ul {
 .nombre-marca {
     color: var(--marca-color);
     font-family: var(--fuente-principal);
-    font-size: 35px;
-   padding-bottom: 10px;
-   
+    font-size: 45px;
+    padding-bottom: 90px;
+    text-align: center;
 }
- p{
+
+p {
     font-family: var(--fuente-parrafo);
     font-size: 15px;
- }
+    font-weight: bold;
+}
 
 span {
     color: #EFB319;
@@ -50,68 +57,83 @@ span {
 
 
 .seccion-inicio {
+
     background:
-        linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.5)),
-        url(/assets/fondo.jpg);
+        linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)),
+        url(/assets/transporte_fondo.jpg);
     background-size: cover;
     background-position: center;
+    min-height: 50vh;
     border-radius: 4px;
-   padding: 40px;
-   padding-top: 10px;
+    padding: 50px 50px;
     margin: 15px 10px;
+
 }
 
-.parrafo-inicio{
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-   padding-bottom: 10px;
+.div-inicio {
+    background-color: #0000004f;
+    padding: 40px;
 }
-.parrafo-lugares{
-    color: rgb(3, 0, 0);
+
+.parrafo-inicio {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.parrafo-lugares {
+    color: rgb(0, 0, 0);
     display: flex;
     justify-self: right;
+    font-size: 25px;
 }
 
 .boton-lugares {
-     display: flex;
+    display: flex;
     justify-self: right;
+
 }
 
 
-.boton-reserva,.boton-lugares{
+.boton-reserva,
+.boton-lugares {
     background-color: #225237d7;
     border-radius: 5px;
     border: 1px solid #EFB319;
     color: white;
-    
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.boton-reserva:hover{
-background-color: #17412a;
+.boton-reserva:hover {
+    background-color: #17412a;
 
 }
 
-.boton-lugares:hover{
-background-color: #17412a;
+.boton-lugares:hover {
+    background-color: #17412a;
 }
 
 .seccion-nosotros {
     background-color: var(--color-secciones);
     padding: 20px;
-     border-radius: var(--seccion-bordes)
+    border-radius: var(--seccion-bordes)
 }
 
-.grid{
+.grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
 }
 
-img{
+
+
+
+img {
     height: 200px;
 }
 
-.lista-footer{
+.lista-footer {
     display: flex;
     flex-direction: column;
 }
