@@ -1,22 +1,27 @@
-:root{
-    --color-fondo:#e2e4e2;
-    --color-secciones:#77806352;
-    --header-color:  #1a402ac4;
-    --marca-color:  #133623;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-fondo: #e2e4e2;
+    --color-secciones: #77806352;
+    --header-color: #1a402ac4;
+    --marca-color: #133623;
     --fuente-principal: "Ultra", serif;
     --fuente-parrafo: "Encode Sans Condensed", sans-serif;
-    --color-lineas:  #efb2195b;
     --seccion-bordes: 10px;
 }
 
 
 body {
-   background-color: var(--color-fondo);
-  
+    background-color: var(--color-fondo);
+
 }
+
 .header-principal {
-background-color: var(--header-color);
-padding: 4px;
+    background-color: var(--header-color);
+    padding: 4px;
 }
 
 a {
@@ -26,7 +31,7 @@ a {
 }
 
 ul {
-   list-style: none;
+    list-style: none;
     display: flex;
     justify-content: left;
     gap: 20px;
@@ -35,14 +40,16 @@ ul {
 .nombre-marca {
     color: var(--marca-color);
     font-family: var(--fuente-principal);
-    font-size: 35px;
-   padding-bottom: 10px;
-   
+    font-size: 45px;
+    padding-bottom: 90px;
+    text-align: center;
 }
- p{
+
+p {
     font-family: var(--fuente-parrafo);
     font-size: 15px;
- }
+    font-weight: bold;
+}
 
 span {
     color: #EFB319;
@@ -50,267 +57,78 @@ span {
 
 
 .seccion-inicio {
+
     background:
-        linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.5)),
-        url(/assets/fondo.jpg);
+        linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)),
+        url(/assets/transporte_fondo.jpg);
     background-size: cover;
     background-position: center;
+    min-height: 50vh;
     border-radius: 4px;
-   padding: 40px;
-   padding-top: 10px;
+    padding: 50px 50px;
     margin: 15px 10px;
+
 }
 
-.parrafo-inicio{
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-   padding-bottom: 10px;
+.div-inicio {
+    background-color: #0000004f;
+    padding: 40px;
 }
-.parrafo-lugares{
-    color: rgb(3, 0, 0);
+
+.parrafo-inicio {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.parrafo-lugares {
+    color: rgb(0, 0, 0);
     display: flex;
     justify-self: right;
+    font-size: 25px;
 }
 
 .boton-lugares {
-     display: flex;
+    display: flex;
     justify-self: right;
+
 }
 
 
-.boton-reserva,.boton-lugares{
+.boton-reserva,
+.boton-lugares {
     background-color: #225237d7;
     border-radius: 5px;
     border: 1px solid #EFB319;
     color: white;
-    
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.boton-reserva:hover{
-background-color: #17412a;
+.boton-reserva:hover {
+    background-color: #17412a;
 
 }
 
-.boton-lugares:hover{
-background-color: #17412a;
+.boton-lugares:hover {
+    background-color: #17412a;
 }
 
 .seccion-nosotros {
     background-color: var(--color-secciones);
     padding: 20px;
-     border-radius: var(--seccion-bordes)
+    border-radius: var(--seccion-bordes)
 }
 
-.grid{
+.grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
 }
 
-img{
+
+
+
+img {
     height: 200px;
-}
-
-/* --- FORMULARIO DE RESERVA --- */
-.booking-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Formulario en 2 columnas */
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-.lista-footer{
-    display: flex;
-    flex-direction: column;
-}
-
-.a-footer {
-    color: black;
-}
-
-/* --- TUS VARIABLES DE COLOR DE ADOBE COLOR --- */
-:root {
-    --color-oscuro-principal: #132226; /* Azul Noche Oscuro */
-    --color-pizarra: #52656B;          /* Gris Pizarra */
-    --color-arena: #CDA37B;            /* Marrón Arena */
-    --color-piedra: #A4978E;           /* Gris Topo / Piedra */
-    --color-acento-vibrante: #048A81;  /* Turquesa Selva (Botones y enlaces) */
-    
-    /* Colores de soporte UI */
-    --color-fondo-formulario: #FFFFFF;
-    --color-fondo-pagina: #F5F7FA;
-    --fuente-principal: 'Outfit', 'Segoe UI', sans-serif;
-}
-
-/* --- ESTILOS DE LA SECCIÓN DE RESERVA --- */
-.booking-section {
-    background-color: var(--color-fondo-pagina);
-    padding: 80px 20px;
-    font-family: var(--fuente-principal);
-    display: flex;
-    justify-content: center;
-}
-
-.container-booking {
-    background-color: var(--color-fondo-formulario);
-    max-width: 800px;
-    width: 100%;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(19, 34, 38, 0.05); /* Sombra suave con tu tono oscuro */
-    border-top: 5px solid var(--color-arena); /* Detalle elegante arriba */
-}
-
-.booking-section h2 {
-    color: var(--color-oscuro-principal);
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-.booking-section .subtitle {
-    color: var(--color-pizarra);
-    text-align: center;
-    margin-bottom: 32px;
-    font-size: 1rem;
-}
-
-/* --- FORMULARIO GRID --- */
-.booking-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.full-width {
-    grid-column: span 2;
-}
-
-.form-group label {
-    color: var(--color-oscuro-principal);
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.form-group input, 
-.form-group select {
-    padding: 12px 16px;
-    border: 1.5px solid rgba(164, 151, 142, 0.4); /* Usa tu color piedra con opacidad */
-    border-radius: 8px;
-    font-size: 1rem;
-    color: var(--color-oscuro-principal);
-    background-color: #FFFFFF;
-    transition: all 0.3s ease;
-    outline: none;
-}
-
-/* Enfoque del input usa tu turquesa vibrante */
-.form-group input:focus, 
-.form-group select:focus {
-    border-color: var(--color-acento-vibrante);
-    box-shadow: 0 0 0 4px rgba(4, 138, 129, 0.15);
-}
-
-/* --- BOTÓN CON TU COLOR DE ACENTO --- */
-.btn-submit {
-    background-color: var(--color-acento-vibrante);
-    color: #FFFFFF;
-    padding: 14px 24px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 8px;
-}
-
-/* Hover interactivo cambia al azul noche de tu paleta */
-.btn-submit:hover {
-    background-color: var(--color-oscuro-principal);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(19, 34, 38, 0.2);
-}
-
-/* --- FOOTER UTILIZANDO EL AZUL NOCHE --- */
-.footer-rapido {
-    background-color: var(--color-oscuro-principal);
-    color: #FFFFFF;
-    padding: 40px 20px;
-    font-family: var(--fuente-principal);
-}
-
-.container-footer {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    text-align: center;
-}
-
-.footer-brand h3 {
-    font-size: 1.4rem;
-    color: var(--color-arena); /* El nombre de la marca resalta en dorado arena */
-    margin-bottom: 4px;
-    letter-spacing: 0.5px;
-}
-
-.footer-brand p {
-    font-size: 0.9rem;
-    color: var(--color-piedra);
-}
-
-.lista-footer {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 32px;
-}
-
-.a-footer {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-}
-
-/* El hover cambia al turquesa llamativo */
-.a-footer:hover {
-    color: var(--color-acento-vibrante);
-    opacity: 1;
-}
-
-.footer-copy {
-    border-top: 1px solid rgba(164, 151, 142, 0.2);
-    width: 100%;
-    padding-top: 20px;
-    font-size: 0.85rem;
-    color: var(--color-piedra);
-}
-
-/* --- DISEÑO RESPONSIVO (MÓVILES) --- */
-@media (max-width: 600px) {
-    .booking-form {
-        grid-template-columns: 1fr;
-    }
-    
-    .full-width {
-        grid-column: span 1;
-    }
-
-    .lista-footer {
-        flex-direction: column;
-        gap: 16px;
-    }
 }
