@@ -5,12 +5,12 @@
 
 :root {
     --color-fondo: #e2e4e2;
-    --color-secciones: #77806352;
-    --header-color: #1a402ac4;
-    --marca-color: #133623;
-    --fuente-principal: "Ultra", serif;
-    --fuente-parrafo: "Encode Sans Condensed", sans-serif;
-    --seccion-bordes: 10px;
+    --header-color: #26411ad2;
+    --marca-color: #0B100A;
+    --fuente-principal: "Alatsi", sans-serif;
+    --fuente-parrafo:  "Scada", sans-serif;
+    --seccion-bordes: 30px;
+    --fuenteh2: "Scada", sans-serif;
 }
 
 
@@ -19,72 +19,113 @@ body {
 
 }
 
+
+
 .header-principal {
     background-color: var(--header-color);
     padding: 4px;
+    display: flex;
+    justify-content: left;
+     gap: 40px;
+   
 }
+
+
+
+.ilogo{
+    width: 150px;
+    height:50px;
+}
+
+
 
 a {
     text-decoration: none;
-    color: white;
+    color: #F1F5EF;
     font-family: var(--fuente-parrafo);
 }
 
+ 
 ul {
     list-style: none;
     display: flex;
     justify-content: left;
+    
     gap: 20px;
 }
 
 .nombre-marca {
     color: var(--marca-color);
     font-family: var(--fuente-principal);
-    font-size: 45px;
-    padding-bottom: 90px;
-    text-align: center;
+    font-size: 55px;
+    text-align: left;
 }
 
 p {
     font-family: var(--fuente-parrafo);
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 19px;
+text-align: center;
 }
 
 span {
     color: #EFB319;
 }
+    
 
 
 .seccion-inicio {
-
     background:
-        linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)),
+        linear-gradient(rgba(148, 231, 148, 0.575), rgba(26, 66, 35, 0.322)),
         url(/assets/transporte_fondo.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 50vh;
-    border-radius: 4px;
-    padding: 50px 50px;
-    margin: 15px 10px;
+    min-height: 80vh;
+    padding:40px 40px;
+    margin-top: 10px;
+    padding: 100px;
+}
+
+
+.seccion-tamaño {
+    max-width: 900px;
+    background-color: #e1eed144;
 
 }
 
 .div-inicio {
-    background-color: #0000004f;
-    padding: 40px;
+    background-color: #191d1a86;
+    padding: 60px;
+    border-radius: 8px;
+
+
+    
+}
+
+.frase{
+    background-color: #048a8100;
+    font-size: 40px;
+    color: #F1F5EF;
+    opacity: 70%;
+    padding-bottom: 50px;
+
 }
 
 .parrafo-inicio {
-    color: rgb(0, 0, 0);
-    font-size: 25px;
+    color: #F1F5EF;
+    font-size: 23px;
+    font-weight: 400;
+    padding-bottom: 90px;
+   
 }
 
 .parrafo-lugares {
-    color: rgb(0, 0, 0);
+    color: #F1F5EF;
     display: flex;
     justify-self: right;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 400;
+     padding-bottom: 90px;
+   
 }
 
 .boton-lugares {
@@ -92,46 +133,135 @@ span {
     justify-self: right;
 
 }
-
 
 .boton-reserva,
 .boton-lugares {
-    background-color: #225237d7;
-    border-radius: 5px;
-    border: 1px solid #EFB319;
-    color: white;
+    background-color: #133623;
+    border-radius: 6px;
+    border: 1px solid #efb21985;
+    color:   #F1F5EF;
     padding: 12px;
     font-size: 16px;
     cursor: pointer;
 }
 
-.boton-reserva:hover {
-    background-color: #17412a;
-
+.boton-lugares:hover {
+    background-color:  #112e1d;
 }
 
-.boton-lugares:hover {
-    background-color: #17412a;
+.boton-reserva:hover {
+    background-color:  #112e1d;
+
+
 }
 
 .seccion-nosotros {
-    background-color: var(--color-secciones);
-    padding: 20px;
-    border-radius: var(--seccion-bordes)
+    padding-bottom: 100px;
+    padding-top: 100px;
+ justify-items: center;
+ padding-left: 50px;
+ padding-right: 50px;
+}
+
+
+.porque-nosotros{
+    padding-top: 200px;
+    padding-bottom: 100px;
+    justify-items: center;
+    
+}
+
+
+.porque-h3{
+   font-size: 35px;
+   padding-bottom: 90px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
+    gap: 80px;
 
 }
 
+<<<<<<< HEAD
+=======
+.icon {
+    width: 150px;
+    height: 150px;
+     background-color: #F1F5EF;
+    border-radius: 100%;
+    padding: 20px;
+    
+}
+
+
+.tarjetas p{
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    
+}
+
+h5{
+    text-align: center;
+    font-size: 17px;
+    
+}
+
+.contenedor-flex{
+    display: flex;
+
+}
+
+.imagen-marca{
+    padding: 30px;
+    display: flex;
+    justify-self: center;
+    height: 300px;
+    width: 300px;
+}
+
+.h3-servicio{
+    text-align: center;
+    font-size: 30px;
+}
+
+h2{
+    font-family: var(--fuenteh2);
+    font-size: 35px;
+    font-weight: 700;
+    background-color: #e7a80880;;
+    border-radius: 30px;
+    text-align: center;
+    color: #0B100A;
+}
+
+
+
+>>>>>>> 0cb0bca57bf38fbfc5a7394e517c8eeab8c37ea6
 img {
     height: 200px;
 }
 
+<<<<<<< HEAD
 / RESET GENERAL Y VARIABLES DE COLOR*/
 {
+=======
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   RESET GENERAL Y VARIABLES DE COLOR (ADOBE COLOR)
+   ========================================================================== */
+* {
+>>>>>>> 0cb0bca57bf38fbfc5a7394e517c8eeab8c37ea6
     margin: 0;
     padding: 0;
     box-shadow: none;
@@ -435,3 +565,98 @@ body {
     transform: translateY(-2px);
 }
 
+<<<<<<< HEAD
+=======
+/* ==========================================================================
+   5. MAIN FOOTER (PIE DE PÁGINA)
+   ========================================================================== */
+.main-footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    padding: 60px 24px 30px 24px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    color: var(--color-arena);
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.footer-brand p {
+    color: var(--color-piedra);
+    font-size: 0.95rem;
+}
+
+.lista-footer {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.lista-footer a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: var(--transicion);
+}
+
+.lista-footer a:hover {
+    color: var(--color-acento);
+    opacity: 1;
+}
+
+.footer-copyright {
+    border-top: 1px solid rgb(97, 60, 184);
+    width: 100%;
+    text-align: center;
+    padding-top: 24px;
+    font-size: 0.85rem;
+    color: var(--color-piedra);
+}
+
+/* ==========================================================================
+   RESPONSIVIDAD SÚPER ADAPTATIVA (MÓVILES Y TABLETS)
+   ========================================================================== */
+@media (max-width: 850px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .full-width {
+        grid-column: span 1;
+    }
+
+    .lista-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}/**
+>>>>>>> 0cb0bca57bf38fbfc5a7394e517c8eeab8c37ea6
