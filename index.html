@@ -35,7 +35,7 @@
   <!--Header, navbar-->
   <header class="header-principal">
     <div class="logo">
-      <img class="ilogo" src="assets/logo_nombre.png" alt="Cordillera travel logo">
+      <img class="ilogo" src="assets/CT.png" alt="Cordillera travel logo">
     </div>
 
     <nav class="navbar">
@@ -44,6 +44,7 @@
         <li><a href="#s-nosotros">Sobre nosotros</a></li>
         <li><a href="#s-servicios">Servicios</a></li>
         <li><a href="#s-destinos">Destinos populares</a></li>
+        <li><a href="#s-destinos">Flota</a></li>
         <li><a href="#s-contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -56,6 +57,7 @@
     <section class="seccion-inicio" id="s-inicio">
       <div class="div-inicio">
         <h1 class="nombre-marca">Cordillera <span>Travel</span></h1>
+        <h2 class="frase">Recorriendo caminos, creando experiencias inolvidables.</h2>
         <p class="parrafo-inicio">¿Planeas un viaje o necesitas transporte confiable? Nosotros te llevamos.</p>
         <button class="boton-reserva">Reserva con nosotros</button>
         <p class="parrafo-lugares">Que lugares te gustaria visitar?</p>
@@ -67,7 +69,7 @@
     <section class="seccion-nosotros" id="s-nosotros">
       <div class="seccion-tamaño">
         <h2>Sobre Nosotros</h2>
-        <img class="imagen-marca" src="" alt="">
+        <img class="imagen-marca" src="assets/icons/grupo.png" alt="">
         <p class="parrafo-nosotros">En Cordillera Travel, somos una empresa de transporte dedicada a los servicios:
           empresarial, privado y turístico con mucho compromiso en solucionar y adaptarnos a las necesidades de nuestros
           clientes.
@@ -77,21 +79,35 @@
 
         <!--seccion por que nosotros-->
         <article class="porque-nosotros" id="s-porque">
-          <h3>Por que viajar con nosotros?</h3>
+          <h3 class="porque-h3">Por que viajar con nosotros?</h3>
 
           <div class="grid">
             <div class="tarjetas">
-              <p>Personal Capacitado</p>
+              <img class="icon" src="assets/icons/seguridad.png" alt="">
+              <h5>Personal Autorizado</h5>
+              <p>Personas autorizadas para un viaje seguro</p>
             </div>
             <div class="tarjetas">
-              <p>Seguridad</p>
+              <img class="icon" src="assets/icons/personal.png" alt="">
+              <h5>Personal Autorizado</h5>
+              <p>Personas autorizadas para un viaje seguro</p>
             </div>
             <div class="tarjetas">
-              <p>Puntualidad</p>
+              <img  class="icon" src="assets/icons/tiempo.png" alt="" srcset="">
+              <h5>Personal Autorizado</h5>
+              <p>Personas autorizadas para un viaje seguro</p>
             </div>
             <div class="tarjetas">
-              <p>Transporte seguro</p>
+              <img  class="icon" src="assets/icons/comodidad.png" alt="" srcset="">
+              <h5>Personal Autorizado</h5>
+              <p>Personas autorizadas para un viaje seguro</p>
             </div>
+             <div class="tarjetas">
+              <img  class="icon" src="assets/icons/dinero.png" alt="" srcset="">
+              <h5>Personal Autorizado</h5>
+              <p>Personas autorizadas para un viaje seguro</p>
+            </div>
+
           </div>
         </article>
       </div>
@@ -99,59 +115,104 @@
 
     <!--seccion servicios-->
     <section class="seccion-servicios" id="s-servicios">
+      <div class="seccion-tamaño">
 
       <div class="contenedor1">
         <h2>Servicios</h2>
-        <div class="contenedor-servicios">
+        <div class="contenedor-flex">
           <article class="cont-servicios">
-            <h3>Transporte empresarial</h3>
+            <img class="imagen-servicio" src="" alt="">
+            <h3 class="h3-servicio">Transporte empresarial</h3>
             <p>Traslado eficiente para colaboradores y empresas.</p>
           </article>
 
           <article class="cont-servicios">
-            <h3>Transporte privado</h3>
+          <img class="imagen-servicio" src="asstico.png" alt="">
+            <h3 class="h3-servicio">Transporte privado</h3>
             <p>Viajes personalizados con comodidad y seguridad.</p>
           </article>
 
           <article class="cont-servicios">
-            <h3>Transporte turístico</h3>
+          <img class="imagen-servicio" src="assets/t_turistico.png" alt="">
+            <h3 class="h3-servicio">Transporte turístico</h3>
             <p>Transporte a destinos turísticos y lugares de interés.</p>
           </article>
         </div>
       </div>
+    </div>
     </section>
 
     <!--seccion destinos populares-->
     <section class="destinos-section" id="s-destinos">
+      <div class="seccion-tamaño">
 
       <div class="contenedor2">
         <h2>Destinos Populares</h2>
-        <div class="contenedor-destinos">
+        <div class="destinos-grid">
 
           <article class="cont-destinos">
-            <img src="assets/playa-tunco.webp" alt="Playa El Tunco">
+            <img class="destino-imagen" src="assets/playa-tunco.webp" alt="Playa El Tunco">
             <div class="destino-info">
-              <h3>Playa El Tunco</h3>
+              <h3 class="destino-h3">Playa El Tunco</h3>
               <p>Descripción breve del destino turístico aquí.</p>
             </div>
           </article>
           <article class="cont-destinos">
-            <img src="assets/volcan-SA.jpg" alt="Volcán de Santa Ana">
+            <img class="destino-imagen" src="assets/volcan-SA.jpg" alt="Volcán de Santa Ana">
             <div class="destino-info">
-              <h3>Volcán de Santa Ana</h3>
+              <h3 class="destino-h3">Volcán de Santa Ana</h3>
               <p>Descripción breve del destino turístico aquí.</p>
             </div>
           </article>
           <article class="cont-destinos">
-            <img src="assets/ruinasmayas.webp" alt="Ruinas Mayas">
+            <img class="destino-imagen" src="assets/ruinasmayas.webp" alt="Ruinas Mayas">
             <div class="destino-info">
-              <h3>Sitios Arqueológicos</h3>
+              <h3 class="destino-h3">Sitios Arqueológicos</h3>
               <p>Descripción breve del destino turístico aquí.</p>
             </div>
           </article>
         </div>
       </div>
+      </div>
     </section>
+
+<!--seccion flota-->
+
+ <section class="flota-section" id="s-flota">
+      <div class="seccion-tamaño">
+
+      <div class="contenedor3">
+        <h2>Nuestras Flotas de Vehiculos</h2>
+        <div class="flota-grid">
+
+          <article class="cont-destinos">
+            <img class="flota-imagen" src="assets/playa-tunco.webp" alt="Playa El Tunco">
+            <div class="flota-info">
+              <h3 class="flota-h3">Playa El Tunco</h3>
+              <p>Descripción breve del destino turístico aquí.</p>
+            </div>
+          </article>
+          <article class="cont-destinos">
+            <img class="destino-imagen" src="assets/volcan-SA.jpg" alt="Volcán de Santa Ana">
+            <div class="destino-info">
+              <h3 class="destino-h3">Volcán de Santa Ana</h3>
+              <p>Descripción breve del destino turístico aquí.</p>
+            </div>
+          </article>
+          <article class="cont-destinos">
+            <img class="destino-imagen" src="assets/ruinasmayas.webp" alt="Ruinas Mayas">
+            <div class="destino-info">
+              <h3 class="destino-h3">Sitios Arqueológicos</h3>
+              <p>Descripción breve del destino turístico aquí.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    
+
 
     <!--seccion reserva/contacto-->
 
