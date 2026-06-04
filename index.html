@@ -8,11 +8,21 @@
      <!--titulo font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
+
+
 <!--parrafo font-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+<!--subtitulos fonts (h2)-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
 <!--icons-->
 
     <title>Cordillera Travel</title>
@@ -21,8 +31,7 @@
     <!--Header, navbar-->
     <header class="header-principal">
         <div class="logo">
-            <img src="" alt="">
-
+            <img src="assets/CT.png" alt="Cordillera travel logo">
         </div>
 
         <nav class="navbar">
@@ -94,6 +103,7 @@ Nos destacamos por la dedicación y profesionalismo de nuestro equipo, quienes t
              </div>
         </div>
 </section>
+
 <!--seccion destinos populares-->
 <section class="destinos-section" id="s-destinos">
 
@@ -126,10 +136,12 @@ Nos destacamos por la dedicación y profesionalismo de nuestro equipo, quienes t
     </div>
  </section>
 
-<section id="reserva" class="booking-section">
-        <div class="container-booking">
+ <!--seccion reserva/contacto-->
+
+<section id="s-reserva" class="booking-section">
+        <div class="form-contenedor">
           <h2>Solicita tu Cotización Personalizada</h2>
-          <p class="subtitle">
+          <p class="parrafo-form">
             Completa el formulario y uno de nuestros asesores planificará tu
             aventura.
           </p>
@@ -161,19 +173,21 @@ Nos destacamos por la dedicación y profesionalismo de nuestro equipo, quienes t
                 type="number"
                 id="pasajeros"
                 min="1"
+                max="100"
                 placeholder="Cantidad"
                 required
               />
             </div>
 
             <div class="form-group">
-              <label for="terreno">Preferencia de Terreno</label>
+              <label for="terreno">Tipo de Servicio</label>
               <select id="terreno" required>
                 <option value="" disabled selected>
                   Selecciona una opción
                 </option>
-                <option value="costa">Costa / Plano</option>
-                <option value="montana">Montaña / Terreno Difícil</option>
+                <option value="t-turistico">Turistico</option>
+                <option value="t-empresarial">Empresarial</option>
+                 <option value="t-privado">Privado</option>
               </select>
             </div>
 
@@ -216,27 +230,18 @@ Nos destacamos por la dedicación y profesionalismo de nuestro equipo, quienes t
         </div>
       </section>
 
-      <footer class="footer-rapido">
-        <div class="container-footer">
-          <div class="footer-brand">
-            <h3>Cordillera Travel</h3>
-            <p>Explorando caminos juntos.</p>
-          </div>
-          <nav class="footer-nav">
+
+
+
+      <footer>
+          <div class="footer-nav">
             <ul class="lista-footer">
               <li><a class="a-footer" href="#s-inicio">Inicio</a></li>
               <li><a class="a-footer" href="#s-nosotros">Sobre Nosotros</a></li>
               <li><a class="a-footer" href="#s-servicios">Servicios</a></li>
               <li><a class="a-footer" href="#s-destinos">Destinos</a></li>
             </ul>
-          </nav>
-          <div class="footer-copy">
-            <p>
-              &copyright 2026 Cordillera Travel. Todos los derechos reservados.
-              Hecho con 💜
-            </p>
           </div>
-        </div>
       </footer>
     </main>
   </body>
