@@ -54,6 +54,7 @@ ul {
     gap: 20px;
 }
 
+
 .nombre-marca {
     color: var(--marca-color);
     font-family: var(--fuente-principal);
@@ -87,8 +88,9 @@ span {
 
 
 .seccion-tamaño {
-    max-width: 900px;
-    background-color: #e1eed144;
+    max-width: 1000px;
+    background-color: #9effa000;
+justify-self: center;
 
 }
 
@@ -179,17 +181,16 @@ span {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 80px;
-
+   
 }
 
-<<<<<<< HEAD
-=======
+
 .icon {
     width: 150px;
     height: 150px;
-     background-color: #F1F5EF;
+     background-color: #efb21991;
     border-radius: 100%;
     padding: 20px;
     
@@ -206,11 +207,14 @@ span {
 h5{
     text-align: center;
     font-size: 17px;
+    padding-top: 40px;
+
     
 }
 
 .contenedor-flex{
     display: flex;
+    gap: 40px;
 
 }
 
@@ -237,241 +241,32 @@ h2{
     color: #0B100A;
 }
 
-
-
->>>>>>> 0cb0bca57bf38fbfc5a7394e517c8eeab8c37ea6
-img {
-    height: 200px;
-}
-
-<<<<<<< HEAD
-/ RESET GENERAL Y VARIABLES DE COLOR*/
-{
-=======
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   RESET GENERAL Y VARIABLES DE COLOR (ADOBE COLOR)
-   ========================================================================== */
-* {
->>>>>>> 0cb0bca57bf38fbfc5a7394e517c8eeab8c37ea6
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    box-sizing: border-box;
-}
-
-:root {
-    --color-oscuro: #132226;       /* Azul Noche Oscuro */
-    --color-pizarra: #52656B;      /* Gris Pizarra */
-    --color-arena: #CDA37B;        /* Marrón Arena / Dorado */
-    --color-piedra: #A4978E;       /* Gris Topo / Piedra */
-    --color-acento: #048A81;       /* Turquesa Selva */
-    --color-blanco: #FFFFFF;
-    --color-fondo-gris: #F8FAFC;
-    --fuente: 'Outfit', sans-serif;
-    --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: var(--fuente);
-    color: var(--color-oscuro);
-    background-color: var(--color-blanco);
-    line-height: 1.6;
-}
-
-/* ==========================================================================
-   1. HEADER & NAV (ESTILO PREMIUM FLOTANTE)
-   ========================================================================== */
-.main-header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1.5px solid rgba(164, 151, 142, 0.15);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 18px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.logo-bold {
-    font-weight: 700;
-    color: var(--color-oscuro);
-}
-
-.logo-light {
-    font-weight: 300;
-    color: var(--color-acento);
-}
-
-.navigation ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.navigation a {
-    text-decoration: none;
-    color: var(--color-pizarra);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: var(--transicion);
-}
-
-.navigation a:hover {
-    color: var(--color-acento);
-}
-
-/* Botón destacado en el menú */
-.navigation .nav-btn {
-    background-color: var(--color-oscuro);
-    color: var(--color-blanco);
-    padding: 10px 20px;
-    border-radius: 6px;
-}
-
-.navigation .nav-btn:hover {
-    background-color: var(--color-acento);
-    color: var(--color-blanco);
-}
-
-/* ==========================================================================
-   2. HERO SECTION (BIENVENIDA IMPACTANTE)
-   ========================================================================== */
-.hero-section {
-    background: linear-gradient(rgba(19, 34, 38, 0.75), rgba(19, 34, 38, 0.6)), 
-                url('./Img/hero-bg.jpg') no-repeat center center/cover;
-    min-height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 24px;
-    color: var(--color-blanco);
-}
-
-.hero-content {
-    max-width: 750px;
-}
-
-.hero-content h1 {
-    font-size: 3.2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 16px;
-    letter-spacing: -0.5px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 32px;
-    color: var(--color-piedra);
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-}
-
-.btn-primary, .btn-secondary {
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: var(--transicion);
-}
-
-.btn-primary {
-    background-color: var(--color-acento);
-    color: var(--color-blanco);
-}
-
-.btn-primary:hover {
-    background-color: var(--color-oscuro);
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--color-blanco);
-    border: 2px solid var(--color-blanco);
-}
-
-.btn-secondary:hover {
-    background-color: var(--color-blanco);
-    color: var(--color-oscuro);
-}
-
-* ==========================================================================
-   5. ABOUT SECTION (Sobre Nosotros)
-   ========================================================================== */
-.about-section {
-    padding: 80px 24px;
-    background-color: var(--color-blanco);
-}
-
-.about-grid {
-    max-width: 1200px;
-    margin: 0 auto;
+.destinos-grid{
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* Columna de texto más ancha */
-    gap: 48px;
-    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    padding-top: 40px;
+   
 }
 
-.badge {
-    background-color: rgba(4, 138, 129, 0.1);
-    color: var(--color-acento);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
+
+img {
+    width: 350px;
 }
 
-.about-text h2 {
-    font-size: 2.2rem;
-    margin: 12px 0 16px 0;
+
+.flota-grid{
+      display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    padding-top: 40px;
 }
 
-.about-text p {
-    color: var(--color-pizarra);
-}
 
-/* Tarjetas de datos rápidos */
-.stat-card {
-    background-color: var(--color-fondo-claro);
-    border-left: 4px solid var(--color-arena); /* Toque dorado a la izquierda */
-    padding: 24px;
-    border-radius: 8px;
-    margin-bottom: 16px;
-}
+
+
+
+
 
 /* ==========================================================================
    4. BOOKING SECTION (FORMULARIO GRID MODERNO)
@@ -564,99 +359,3 @@ body {
     background-color: var(--color-oscuro);
     transform: translateY(-2px);
 }
-
-<<<<<<< HEAD
-=======
-/* ==========================================================================
-   5. MAIN FOOTER (PIE DE PÁGINA)
-   ========================================================================== */
-.main-footer {
-    background-color: var(--color-oscuro);
-    color: var(--color-blanco);
-    padding: 60px 24px 30px 24px;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-}
-
-.footer-brand h3 {
-    font-size: 1.5rem;
-    color: var(--color-arena);
-    margin-bottom: 6px;
-    text-align: center;
-}
-
-.footer-brand p {
-    color: var(--color-piedra);
-    font-size: 0.95rem;
-}
-
-.lista-footer {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-}
-
-.lista-footer a {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: 500;
-    opacity: 0.8;
-    transition: var(--transicion);
-}
-
-.lista-footer a:hover {
-    color: var(--color-acento);
-    opacity: 1;
-}
-
-.footer-copyright {
-    border-top: 1px solid rgb(97, 60, 184);
-    width: 100%;
-    text-align: center;
-    padding-top: 24px;
-    font-size: 0.85rem;
-    color: var(--color-piedra);
-}
-
-/* ==========================================================================
-   RESPONSIVIDAD SÚPER ADAPTATIVA (MÓVILES Y TABLETS)
-   ========================================================================== */
-@media (max-width: 850px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-}
-
-@media (max-width: 650px) {
-    .header-container {
-        flex-direction: column;
-        gap: 16px;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .booking-form {
-        grid-template-columns: 1fr;
-    }
-    
-    .full-width {
-        grid-column: span 1;
-    }
-
-    .lista-footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-}/**
->>>>>>> 0cb0bca57bf38fbfc5a7394e517c8eeab8c37ea6
