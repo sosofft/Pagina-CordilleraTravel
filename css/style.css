@@ -5,9 +5,8 @@
 
 :root {
     --color-fondo: #e2e4e2;
-    --color-secciones: #bfe6d063;
-    --header-color: #173323;
-    --marca-color: #133623;
+    --header-color: #26411ad2;
+    --marca-color: #0B100A;
     --fuente-principal: "Alatsi", sans-serif;
     --fuente-parrafo:  "Scada", sans-serif;
     --seccion-bordes: 30px;
@@ -20,21 +19,38 @@ body {
 
 }
 
+
+
 .header-principal {
     background-color: var(--header-color);
     padding: 4px;
+    display: flex;
+    justify-content: left;
+     gap: 40px;
+   
 }
+
+
+
+.ilogo{
+    width: 150px;
+    height:50px;
+}
+
+
 
 a {
     text-decoration: none;
-    color: white;
+    color: #F1F5EF;
     font-family: var(--fuente-parrafo);
 }
 
+ 
 ul {
     list-style: none;
     display: flex;
     justify-content: left;
+    
     gap: 20px;
 }
 
@@ -42,52 +58,74 @@ ul {
     color: var(--marca-color);
     font-family: var(--fuente-principal);
     font-size: 55px;
-    padding-bottom: 90px;
-    text-align: center;
-    
+    text-align: left;
 }
 
 p {
     font-family: var(--fuente-parrafo);
-    font-size: 15px;
+    font-size: 19px;
+text-align: center;
 }
 
 span {
     color: #EFB319;
 }
+    
 
 
 .seccion-inicio {
-
     background:
-        linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)),
+        linear-gradient(rgba(148, 231, 148, 0.575), rgba(26, 66, 35, 0.322)),
         url(/assets/transporte_fondo.jpg);
     background-size: cover;
     background-position: center;
     min-height: 80vh;
-    border-radius: 4px;
-    padding: 50px 50px;
+    padding:40px 40px;
     margin-top: 10px;
+    padding: 100px;
+}
+
+
+.seccion-tamaño {
+    max-width: 900px;
+    background-color: #e1eed144;
 
 }
 
 .div-inicio {
     background-color: #191d1a86;
     padding: 60px;
+    border-radius: 8px;
+
+
+    
+}
+
+.frase{
+    background-color: #048a8100;
+    font-size: 40px;
+    color: #F1F5EF;
+    opacity: 70%;
+    padding-bottom: 50px;
+
 }
 
 .parrafo-inicio {
-    color: rgb(255, 255, 255);
+    color: #F1F5EF;
     font-size: 23px;
+    font-weight: 400;
+    padding-bottom: 90px;
    
 }
 
 .parrafo-lugares {
-    color: rgb(255, 255, 255);
+    color: #F1F5EF;
     display: flex;
     justify-self: right;
     font-size: 20px;
     font-weight: 400;
+     padding-bottom: 90px;
+   
 }
 
 .boton-lugares {
@@ -98,42 +136,103 @@ span {
 
 .boton-reserva,
 .boton-lugares {
-    background-color: #225237b2;
-    border-radius: 1px;
+    background-color: #133623;
+    border-radius: 6px;
     border: 1px solid #efb21985;
-    color:  #ffffff;
+    color:   #F1F5EF;
     padding: 12px;
     font-size: 16px;
     cursor: pointer;
 }
 
 .boton-lugares:hover {
-    background-color:  #2b4e3b;
+    background-color:  #112e1d;
 }
 
 .boton-reserva:hover {
-    background-color: #2b4e3b;
+    background-color:  #112e1d;
+
 
 }
 
-
 .seccion-nosotros {
-    background-color: var(--color-secciones);
-    padding: 20px;
-    border-radius: var(--seccion-bordes)
+    padding-bottom: 100px;
+    padding-top: 100px;
+ justify-items: center;
+ padding-left: 50px;
+ padding-right: 50px;
+}
+
+
+.porque-nosotros{
+    padding-top: 200px;
+    padding-bottom: 100px;
+    justify-items: center;
+    
+}
+
+
+.porque-h3{
+   font-size: 35px;
+   padding-bottom: 90px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
+    gap: 80px;
 
 }
 
+.icon {
+    width: 150px;
+    height: 150px;
+     background-color: #F1F5EF;
+    border-radius: 100%;
+    padding: 20px;
+    
+}
+
+
+.tarjetas p{
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    
+}
+
+h5{
+    text-align: center;
+    font-size: 17px;
+    
+}
+
+.contenedor-flex{
+    display: flex;
+
+}
+
+.imagen-marca{
+    padding: 30px;
+    display: flex;
+    justify-self: center;
+    height: 300px;
+    width: 300px;
+}
+
+.h3-servicio{
+    text-align: center;
+    font-size: 30px;
+}
 
 h2{
     font-family: var(--fuenteh2);
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 700;
+    background-color: #e7a80880;;
+    border-radius: 30px;
+    text-align: center;
+    color: #0B100A;
 }
 
 
@@ -141,6 +240,15 @@ h2{
 img {
     height: 200px;
 }
+
+
+
+
+
+
+
+
+
 
 /* ==========================================================================
    RESET GENERAL Y VARIABLES DE COLOR (ADOBE COLOR)
@@ -555,4 +663,4 @@ body {
         align-items: center;
         gap: 16px;
     }
-}
+}/**
