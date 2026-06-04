@@ -5,12 +5,13 @@
 
 :root {
     --color-fondo: #e2e4e2;
-    --color-secciones: #77806352;
-    --header-color: #1a402ac4;
+    --color-secciones: #bfe6d063;
+    --header-color: #173323;
     --marca-color: #133623;
-    --fuente-principal: "Ultra", serif;
-    --fuente-parrafo: "Encode Sans Condensed", sans-serif;
-    --seccion-bordes: 10px;
+    --fuente-principal: "Alatsi", sans-serif;
+    --fuente-parrafo:  "Scada", sans-serif;
+    --seccion-bordes: 30px;
+    --fuenteh2: "Scada", sans-serif;
 }
 
 
@@ -40,15 +41,15 @@ ul {
 .nombre-marca {
     color: var(--marca-color);
     font-family: var(--fuente-principal);
-    font-size: 45px;
+    font-size: 55px;
     padding-bottom: 90px;
     text-align: center;
+    
 }
 
 p {
     font-family: var(--fuente-parrafo);
     font-size: 15px;
-    font-weight: bold;
 }
 
 span {
@@ -63,28 +64,30 @@ span {
         url(/assets/transporte_fondo.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 50vh;
+    min-height: 80vh;
     border-radius: 4px;
     padding: 50px 50px;
-    margin: 15px 10px;
+    margin-top: 10px;
 
 }
 
 .div-inicio {
-    background-color: #0000004f;
-    padding: 40px;
+    background-color: #191d1a86;
+    padding: 60px;
 }
 
 .parrafo-inicio {
-    color: rgb(0, 0, 0);
-    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+   
 }
 
 .parrafo-lugares {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: flex;
     justify-self: right;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .boton-lugares {
@@ -92,27 +95,27 @@ span {
     justify-self: right;
 
 }
-
 
 .boton-reserva,
 .boton-lugares {
-    background-color: #225237d7;
-    border-radius: 5px;
-    border: 1px solid #EFB319;
-    color: white;
+    background-color: #225237b2;
+    border-radius: 1px;
+    border: 1px solid #efb21985;
+    color:  #ffffff;
     padding: 12px;
     font-size: 16px;
     cursor: pointer;
 }
 
-.boton-reserva:hover {
-    background-color: #17412a;
-
-}
-
 .boton-lugares:hover {
-    background-color: #17412a;
+    background-color:  #2b4e3b;
 }
+
+.boton-reserva:hover {
+    background-color: #2b4e3b;
+
+}
+
 
 .seccion-nosotros {
     background-color: var(--color-secciones);
@@ -126,6 +129,12 @@ span {
 
 }
 
+
+h2{
+    font-family: var(--fuenteh2);
+    font-size: 25px;
+    font-weight: 700;
+}
 
 
 
@@ -505,7 +514,7 @@ body {
 }
 
 .footer-copyright {
-    border-top: 1px solid rgba(164, 151, 142, 0.2);
+    border-top: 1px solid rgb(97, 60, 184);
     width: 100%;
     text-align: center;
     padding-top: 24px;
