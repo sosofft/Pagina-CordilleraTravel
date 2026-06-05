@@ -137,12 +137,16 @@ body {
 }
 
 /* Contenedor elegante para ordenar los botones */
-.botones-hero {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+
+
+.boton-reserva {
+    text-decoration: none;
 }
+
+.boton-lugares {
+    text-decoration: none;
+}
+
 
 .boton-reserva, .boton-lugares {
     font-family: var(--fuente-parrafo);
@@ -161,6 +165,7 @@ body {
     border: 1px solid var(--color-amarillo);
     color: var(--header-color);
 }
+
 
 .boton-reserva:hover {
     background-color: transparent;
@@ -496,7 +501,7 @@ h5 {
 .footer-principal {
     background-color: #07130A;
     color: #cbd5e1;
-    padding: 80px 8% 30px 8%;
+    padding: 80px 10% 30px 10%;
     font-size: 15px;
 }
 
@@ -512,6 +517,7 @@ h5 {
     flex: 1;
     min-width: 220px;
 }
+
 
 .col-brand h3 {
     font-family: var(--fuente-principal);
@@ -552,4 +558,99 @@ h5 {
 .hecho-con .corazon {
     color: #ffcc00;
 }
+ .footer-copy{
+    padding-top: 50px;
+    text-align: center;
+ }
 
+/* 
+   MEDIA QUERY 1: ADAPTACIÓN PARA TABLETS (MÁXIMO 1024PX)
+   */
+
+   @media (max-width: 1024px) {
+    /* Ajustamos el tamaño de los títulos principales para que no se vean gigantes */
+    .nombre-marca {
+        font-size: 50px;
+    }
+    
+    .frase {
+        font-size: 28px;
+    }
+
+    /* Reducimos un poco los espacios (paddings) globales */
+    .seccion-inicio, .seccion-nosotros, .porque-nosotros, .destinos-section, .flota-section {
+        padding: 60px 20px;
+    }
+
+    /* Reducimos el espacio entre los enlaces del menú */
+    .navbar ul {
+        gap: 15px;
+    }
+}
+
+/* ==========================================================================
+   MEDIA QUERY 2: ADAPTACIÓN PARA CELULARES (MÁXIMO 768PX)
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Ajustes del Encabezado */
+    .header-principal {
+        padding: 15px 5%;
+    }
+
+    /* 2. Activamos el botón de la Hamburguesa */
+    .menu-hamburguesa {
+        display: flex;
+    }
+
+    /* 3. Transformamos la lista 'ul' en el Menú Lateral Oculto */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido a la derecha */
+        width: 75%;   /* Toma el 75% del ancho de la pantalla */
+        height: 100vh;
+        background-color: #0d1b11; /* Verde oscuro Premium */
+        padding: 100px 40px;
+        flex-direction: column; /* Enlaces uno abajo del otro */
+        justify-content: flex-start;
+        gap: 30px;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+        transition: all 0.4s ease;
+        z-index: 1000;
+    }
+
+    /* Enlaces más grandes para tocarlos fácil con el dedo */
+    .nav-links a {
+        font-size: 22px;
+        display: block;
+        text-align: left;
+    }
+
+    /* 4. Ajustes del Hero (Inicio) en Celular */
+    .nombre-marca {
+        font-size: 38px;
+    }
+
+    .frase {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+
+    .parrafo-inicio {
+        font-size: 16px;
+        padding-bottom: 40px;
+    }
+
+    /* Los botones del inicio se apilan verticalmente en el celular */
+    .botones-hero {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .boton-reserva, .boton-lugares {
+        width: 100%; /* Botones a lo ancho de la pantalla */
+        text-align: center;
+    }
+}
