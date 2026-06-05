@@ -12,8 +12,8 @@
     --header-color: #07130A; 
     --marca-color: #111b15;
     --color-amarillo: #f4bf02;   /* Dorado champaña sofisticado, no amarillo chillón */
-    --texto-oscuro: #212529;
-    --texto-mutado: #6c757d;
+    --texto-oscuro: #23321b;
+    --texto-mutado: #3f4d22;
     
     /* Tipografías */
     --fuente-principal: "Alatsi", sans-serif;
@@ -43,7 +43,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgb(231, 3, 3);
+    box-shadow: 0 3px 80px rgba(255, 187, 0, 0.56);
 }
 
 .ilogo {
@@ -72,7 +72,7 @@ body {
 .navbar a::after {
     content: '';
     position: absolute;
-    width: 0;
+    width:0;
     height: 2px;
     bottom: -5px;
     left: 0;
@@ -124,7 +124,7 @@ body {
 
 .frase {
     font-size: 32px;
-    color: #f1f5ef;
+    color: #f1f5efa0;
     font-weight: 400;
     margin-bottom: 25px;
 }
@@ -259,7 +259,7 @@ h2::after {
     padding: 40px 30px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Sombra ultra suave */
+    box-shadow: 0 10px 30px rgba(39, 79, 33, 0.092); /* Sombra ultra suave */
     transition: var(--transicion);
     border-top: 3px solid transparent;
 }
@@ -267,14 +267,14 @@ h2::after {
 .tarjetas:hover {
     transform: translateY(-5px);
     border-top: 3px solid var(--color-amarillo);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 35px rgba(255, 183, 1, 0.219);
 }
 
 .icon {
     width: 75px;
     height: 75px;
     background-color: #fdfaf2;
-    border: 1px solid rgba(197, 160, 89, 0.2);
+    border: 1px solid rgba(184, 120, 2, 0.2);
     border-radius: 50%;
     padding: 15px;
     object-fit: contain;
@@ -336,7 +336,7 @@ h5 {
 }
 
 .cont-servicios:hover p {
-    color: #cbd5e1;
+    color: #ffffff;
 }
 
 /* ==========================================================================
