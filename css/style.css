@@ -1,312 +1,436 @@
-* {
+
+   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Evita que el padding rompa los tamaños */
 }
 
 :root {
-    --color-fondo: #e2e4e2;
-    --header-color: #26411ad2;
-    --marca-color: #0B100A;
+    /* Paleta Ejecutiva: Negros profundos, dorados champaña y grises limpios */
+    --color-fondo: #d6d9bb; 
+    --color-superficie: #ffffff;
+    --header-color: #07130A; 
+    --marca-color: #111b15;
+    --color-amarillo: #f4bf02;   /* Dorado champaña sofisticado, no amarillo chillón */
+    --texto-oscuro: #212529;
+    --texto-mutado: #6c757d;
+    
+    /* Tipografías */
     --fuente-principal: "Alatsi", sans-serif;
-    --fuente-parrafo:  "Scada", sans-serif;
-    --seccion-bordes: 30px;
-    --fuenteh2: "Scada", sans-serif;
+    --fuente-parrafo: "Scada", sans-serif;
+    
+    /* Transiciones suaves para elementos interactivos */
+    --transicion: all 0.3s ease;
 }
-
 
 body {
     background-color: var(--color-fondo);
-
+    font-family: var(--fuente-parrafo);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-
-
+/* ==========================================================================
+   2. HEADER & NAVEGACIÓN (Estilo Minimalista)
+   ========================================================================== */
 .header-principal {
     background-color: var(--header-color);
-    padding: 4px;
+    padding: 15px 8%;
     display: flex;
-    justify-content: left;
-     gap: 40px;
-   
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgb(231, 3, 3);
 }
 
-
-
-.ilogo{
-    width: 150px;
-    height:50px;
+.ilogo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
 }
 
-
-
-a {
-    text-decoration: none;
-    color: #F1F5EF;
-    font-family: var(--fuente-parrafo);
-}
-
- 
-ul {
+.navbar ul {
+    display: flex;
+    gap: 30px;
     list-style: none;
-    display: flex;
-    justify-content: left;
-    
-    gap: 20px;
 }
 
+.navbar a {
+    text-decoration: none;
+    color: #f1f5ef;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: var(--transicion);
+}
+  
 
-.nombre-marca {
-    color: var(--marca-color);
-    font-family: var(--fuente-principal);
-    font-size: 55px;
-    text-align: left;
+/* Animación sutil de línea dorada al pasar el mouse */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--color-amarillo);
+    transition: var(--transicion);
 }
 
-p {
-    font-family: var(--fuente-parrafo);
-    font-size: 19px;
-text-align: center;
+.navbar a:hover {
+    color: var(--color-amarillo);
 }
 
-span {
-    color: #EFB319;
+.navbar a:hover::after {
+    width: 100%;
 }
-    
 
-
+/* ==========================================================================
+   3. SECCIÓN HERO (Impacto Visual de Alta Gama)
+   ========================================================================== */
 .seccion-inicio {
-    background:
-        linear-gradient(rgba(148, 231, 148, 0.575), rgba(26, 66, 35, 0.322)),
-        url(/assets/transporte_fondo.jpg);
+    background: 
+        linear-gradient(rgba(13, 27, 17, 0.8), rgba(17, 27, 21, 0.75)), 
+        url('../assets/transporte_fondo.jpg'); /* Corregido path relativo estándar */
     background-size: cover;
     background-position: center;
-    min-height: 80vh;
-    padding:40px 40px;
-    margin-top: 10px;
-    padding: 100px;
-}
-
-
-.seccion-tamaño {
-    max-width: 1000px;
-    background-color: #9effa000;
-justify-self: center;
-
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 8%;
 }
 
 .div-inicio {
-    background-color: #191d1a86;
-    padding: 60px;
-    border-radius: 8px;
-
-
-    
+    max-width: 850px;
+    text-align: center;
+    background: transparent; /* Quitamos la caja opaca pesada para mayor modernidad */
 }
 
-.frase{
-    background-color: #048a8100;
-    font-size: 40px;
-    color: #F1F5EF;
-    opacity: 70%;
-    padding-bottom: 50px;
+.nombre-marca {
+    color: #ffffff;
+    font-family: var(--fuente-principal);
+    font-size: 65px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
 
+.nombre-marca span {
+    color: var(--color-amarillo);
+}
+
+.frase {
+    font-size: 32px;
+    color: #f1f5ef;
+    font-weight: 400;
+    margin-bottom: 25px;
 }
 
 .parrafo-inicio {
-    color: #F1F5EF;
-    font-size: 23px;
-    font-weight: 400;
-    padding-bottom: 90px;
-   
-}
-
-.parrafo-lugares {
-    color: #F1F5EF;
-    display: flex;
-    justify-self: right;
+    color: #e2e4e2;
     font-size: 20px;
-    font-weight: 400;
-     padding-bottom: 90px;
-   
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-.boton-lugares {
+/* Contenedor elegante para ordenar los botones */
+.botones-hero {
     display: flex;
-    justify-self: right;
-
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-.boton-reserva,
-.boton-lugares {
-    background-color: #133623;
-    border-radius: 6px;
-    border: 1px solid #efb21985;
-    color:   #F1F5EF;
-    padding: 12px;
+.boton-reserva, .boton-lugares {
+    font-family: var(--fuente-parrafo);
+    font-weight: 700;
+    padding: 14px 32px;
     font-size: 16px;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
     cursor: pointer;
+    transition: var(--transicion);
 }
 
-.boton-lugares:hover {
-    background-color:  #112e1d;
+/* Botón Principal Dorada/Oscuro */
+.boton-reserva {
+    background-color: var(--color-amarillo);
+    border: 1px solid var(--color-amarillo);
+    color: var(--header-color);
 }
 
 .boton-reserva:hover {
-    background-color:  #112e1d;
-
-
+    background-color: transparent;
+    color: var(--color-amarillo);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
 }
 
+/* Botón Secundario Transparente */
+.boton-lugares {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.boton-lugares:hover {
+    background-color: #ffffff;
+    color: var(--header-color);
+}
+
+/* ==========================================================================
+   4. MAQUETACIÓN GLOBAL DE SECCIONES & TÍTULOS
+   ========================================================================== */
+.seccion-tamaño {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: var(--fuente-principal);
+    font-size: 38px;
+    text-align: center;
+    color: var(--marca-color);
+    margin-bottom: 50px;
+    position: relative;
+    font-weight: 400;
+}
+
+/* Línea sutil decorativa premium bajo los títulos principales */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-amarillo);
+    margin: 12px auto 0 auto;
+}
+
+/* ==========================================================================
+   5. SECCIÓN SOBRE NOSOTROS
+   ========================================================================== */
 .seccion-nosotros {
-    padding-bottom: 100px;
-    padding-top: 100px;
- justify-items: center;
- padding-left: 50px;
- padding-right: 50px;
+    padding: 100px 0;
+    background-color: var(--color-superficie);
+    text-align: center;
 }
 
-
-.porque-nosotros{
-    padding-top: 200px;
-    padding-bottom: 100px;
-    justify-items: center;
-    
+.imagen-marca {
+    margin: 0 auto 30px auto;
+    height: auto;
+    width: 120px; /* Tamaño de ícono de marca controlado */
+    display: block;
 }
 
+.parrafo-nosotros {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 19px;
+    color: var(--texto-mutado);
+    text-align: center;
+}
 
-.porque-h3{
-   font-size: 35px;
-   padding-bottom: 90px;
+/* ==========================================================================
+   6. POR QUÉ VIAJAR CON NOSOTROS (Tarjetas Premium Elevadas)
+   ========================================================================== */
+.porque-nosotros {
+    padding: 100px 0;
+    background-color: #f1f3f1;
+}
+
+.porque-h3 {
+    font-family: var(--fuente-principal);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 80px;
-   
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo automático */
+    gap: 30px;
 }
 
+.tarjetas {
+    background-color: var(--color-superficie);
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Sombra ultra suave */
+    transition: var(--transicion);
+    border-top: 3px solid transparent;
+}
+
+.tarjetas:hover {
+    transform: translateY(-5px);
+    border-top: 3px solid var(--color-amarillo);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
 
 .icon {
-    width: 150px;
-    height: 150px;
-     background-color: #efb21991;
-    border-radius: 100%;
-    padding: 20px;
-    
+    width: 75px;
+    height: 75px;
+    background-color: #fdfaf2;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 50%;
+    padding: 15px;
+    object-fit: contain;
+    transition: var(--transicion);
 }
 
-
-.tarjetas p{
-    text-align: center;
-    padding: 20px;
-    font-size: 15px;
-    
-}
-
-h5{
-    text-align: center;
-    font-size: 17px;
-    padding-top: 40px;
-
-    
-}
-
-.contenedor-flex{
-    display: flex;
-    gap: 40px;
-
-}
-
-.imagen-marca{
-    padding: 30px;
-    display: flex;
-    justify-self: center;
-    height: 300px;
-    width: 300px;
-}
-
-.h3-servicio{
-    text-align: center;
-    font-size: 30px;
-}
-
-h2{
-    font-family: var(--fuenteh2);
-    font-size: 35px;
+h5 {
+    font-size: 20px;
     font-weight: 700;
-    background-color: #e7a80880;;
-    border-radius: 30px;
+    margin-top: 20px;
+    color: var(--marca-color);
+}
+
+.tarjetas p {
+    color: var(--texto-mutado);
+    font-size: 15px;
+    margin-top: 12px;
     text-align: center;
-    color: #0B100A;
 }
-
-.destinos-grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 40px;
-    padding-top: 40px;
-   
-}
-
-
-img {
-    width: 350px;
-}
-
-
-.flota-grid{
-      display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 40px;
-    padding-top: 40px;
-}
-
-
-
-
-
-
 
 /* ==========================================================================
-   4. BOOKING SECTION (FORMULARIO GRID MODERNO)
+   7. SECCIÓN SERVICIOS
+   ========================================================================== */
+.seccion-servicios {
+    padding: 100px 0;
+    background-color: var(--color-superficie);
+}
+
+.contenedor-flex {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Soporte móvil */
+}
+
+.cont-servicios {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--color-fondo);
+    padding: 40px 30px;
+    border-radius: 6px;
+    text-align: center;
+    transition: var(--transicion);
+}
+
+.cont-servicios:hover {
+    background-color: var(--header-color);
+    color: #ffffff;
+}
+
+.h3-servicio {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.cont-servicios p {
+    color: var(--texto-mutado);
+    font-size: 16px;
+}
+
+.cont-servicios:hover p {
+    color: #cbd5e1;
+}
+
+/* ==========================================================================
+   8. DESTINOS & FLOTA (Diseño de Tarjetas de Imagen)
+   ========================================================================== */
+.destinos-section, .flota-section {
+    padding: 100px 0;
+}
+
+.destinos-section { background-color: #f1f3f1; }
+.flota-section { background-color: var(--color-superficie); }
+
+.destinos-grid, .flota-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.cont-destinos {
+    background-color: var(--color-superficie);
+    border-radius: 8px;
+    overflow: hidden; /* Corta la imagen desbordada por los bordes redondeados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: var(--transicion);
+}
+
+.cont-destinos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Ajuste fino de imágenes */
+.destino-imagen, .flota-imagen, .cont-destinos img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover; /* Recorta perfectamente las fotos sin deformarlas */
+    transition: var(--transicion);
+}
+
+.cont-destinos:hover img {
+    transform: scale(1.04); /* Efecto sutil de zoom premium */
+}
+
+.destino-info, .flota-info {
+    padding: 25px;
+}
+
+.destino-h3, .flota-h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--marca-color);
+}
+
+.destino-info p, .flota-info p {
+    color: var(--texto-mutado);
+    font-size: 15px;
+    text-align: left; /* Las descripciones largas se leen mejor a la izquierda */
+}
+
+/* ==========================================================================
+   9. FORMULARIO DE COTIZACIÓN (Diseño de Entrada Limpio y Moderno)
    ========================================================================== */
 .booking-section {
-    background-color: var(--color-fondo-gris);
-    padding: 90px 24px;
-    display: flex;
-    justify-content: center;
+    padding: 100px 0;
+    background: linear-gradient(rgba(13, 27, 17, 0.95), rgba(13, 27, 17, 0.95)), url('../assets/form_bg.jpg');
+    background-size: cover;
+    color: #ffffff;
 }
 
-.booking-container {
-    background-color: var(--cologit r-blanco);
-    max-width: 850px;
-    width: 100%;
-    padding: 48px;
-    border-radius: 16px;
-    box-shadow: 0 12px 40px rgba(19, 34, 38, 0.04);
-    border-top: 5px solid var(--color-arena);
+.form-contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.booking-header {
+.booking-section h2 {
+    color: #ffffff;
+}
+
+.booking-section h2::after {
+    background-color: var(--color-amarillo);
+}
+
+.parrafo-form {
     text-align: center;
+    color: #cbd5e1;
     margin-bottom: 40px;
-}
-
-.booking-header h2 {
-    font-size: 2.2rem;
-    color: var(--color-oscuro);
-    margin-bottom: 8px;
-}
-
-.booking-header p {
-    color: var(--color-pizarra);
 }
 
 .booking-form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
 .form-group {
@@ -315,47 +439,117 @@ img {
     gap: 8px;
 }
 
-.full-width {
-    grid-column: span 2;
+.form-group.full-width {
+    grid-column: span 2; /* inputs que toman todo el ancho */
 }
 
 .form-group label {
-    color: var(--color-oscuro);
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--color-amarillo);
 }
 
-.form-group input, 
-.form-group select {
-    padding: 14px 16px;
-    border: 1.5px solid rgba(164, 151, 142, 0.35);
-    border-radius: 8px;
-    font-size: 1rem;
-    color: var(--color-oscuro);
-    outline: none;
+.form-group input, .form-group select {
+    padding: 12px 16px;
+    background-color: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: var(--fuente-parrafo);
+    font-size: 16px;
     transition: var(--transicion);
 }
 
-.form-group input:focus, 
-.form-group select:focus {
-    border-color: var(--color-acento);
-    box-shadow: 0 0 0 4px rgba(4, 138, 129, 0.12);
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--color-amarillo);
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
-.btn-submit {
-    background-color: var(--color-acento);
-    color: var(--color-blanco);
-    padding: 16px 24px;
+/* Arreglo para que las opciones del select se lean en fondo oscuro */
+.form-group select option {
+    background-color: var(--header-color);
+    color: #ffffff;
+}
+
+.boton-submit {
+    background-color: var(--color-amarillo);
+    color: var(--header-color);
     border: none;
-    border-radius: 8px;
-    font-size: 1.05rem;
-    font-weight: 600;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
     cursor: pointer;
     transition: var(--transicion);
-    margin-top: 12px;
+    margin-top: 15px;
 }
 
-.btn-submit:hover {
-    background-color: var(--color-oscuro);
-    transform: translateY(-2px);
+.boton-submit:hover {
+    background-color: #fff06cd6;
+    box-shadow: 0 5px 20px rgba(173, 253, 157, 0.3);
 }
+
+/* 10. FOOTER CORPORATIVO */
+
+.footer-principal {
+    background-color: #07130A;
+    color: #cbd5e1;
+    padding: 80px 8% 30px 8%;
+    font-size: 15px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.col-brand h3 {
+    font-family: var(--fuente-principal);
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.col-brand h3 span {
+    color: var(--color-amarillo);
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.lista-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-footer a {
+    color: #ffffff;
+    transition: var(--transicion);
+    text-decoration: none;
+}
+
+.lista-footer a:hover {
+    color: var(--color-amarillo);
+    padding-left: 5px;
+}
+
+
+.hecho-con .corazon {
+    color: #ffcc00;
+}
+
