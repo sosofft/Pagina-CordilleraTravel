@@ -151,7 +151,7 @@ body {
 .boton-reserva, .boton-lugares {
     font-family: var(--fuente-parrafo);
     font-weight: 700;
-    padding: 14px 32px;
+    padding: 14px 22px;
     font-size: 16px;
     letter-spacing: 0.5px;
     border-radius: 4px;
